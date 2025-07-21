@@ -1,0 +1,1 @@
+для разработки в ubuntu установи: apt install gcc libc-dev

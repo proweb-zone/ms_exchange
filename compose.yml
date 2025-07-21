@@ -1,0 +1,18 @@
+services:
+  app:
+    container_name: ms_exchange
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runner
+    networks:
+      - ms_toledo_toledo
+    restart: unless-stopped
+    volumes:
+      - ./resources/tmp:/app/tmp
+    env_file:
+      - .env
+
+networks:
+  ms_toledo_toledo:
+    external: true
